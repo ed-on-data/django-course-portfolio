@@ -1,14 +1,23 @@
-{% extends 'portfolio/base.html' %}
+{% extends "portfolio/base.html" %}
+
+{% load static %}
 
 {% block content %}
-<h1>My Blog</h1>
-<h5>I have written {{blogs.count}} blog{{ blogs.count|pluralize }}  </h5>
+
+<h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
+
+<h3 class="text-center mb-5">I have written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
 
 {% for blog in blogs %}
-
-<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
-<p>{{ blog.content|safe|truncatechars:250 }}</p>
-<p>{{ blog.publish_date|date:'d M Y'|upper }}</p>
-
+<div class="row justify-content-center my-3">
+  <div class="col-md-10">
+    <a href="{% url 'blog:detail' blog.id %}">
+      <h2>{{ blog.title }}</h2>
+    </a>
+    <h5 class="text-muted">{{ blog.publish_date|date:'M d Y'|upper }}</h5>
+    <h4>{{ blog.content|striptags|truncatechars:100 }}</h4>
+  </div>
+</div>
 {% endfor %}
+
 {% endblock %}

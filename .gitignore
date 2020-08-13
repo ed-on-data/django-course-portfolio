@@ -10,7 +10,8 @@ token.pickle
 *.xlsx
 .DS_Store
 db.sqlite3
-static/
+*.jpg
+*.pdf
 media/
 
 # jupyter
@@ -25,6 +26,5 @@ TODO.md
 #dash 
 testapp.py
 cache-directory
-blog/__pycache__/admin.cpython-38.pyc
-blog/__pycache__/models.cpython-38.pyc
-blog/__pycache__/views.cpython-38.pyc
+blog/__pycache__/
+portfolio/__pycache__/
