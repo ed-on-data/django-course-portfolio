@@ -4,27 +4,9 @@ creds.py
 credentials.json
 token.pickle
 
-# datafile types
-*.log
-*.csv
-*.xlsx
-.DS_Store
-db.sqlite3
-*.jpg
-*.pdf
-media/
 
-# jupyter
-.ipynb_checkpoints/
-__pycache__/
-*.pyc
 
 #other
 TODO.md
 .vscode
 
-#dash 
-testapp.py
-cache-directory
-blog/__pycache__/
-portfolio/__pycache__/
